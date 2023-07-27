@@ -3,6 +3,8 @@ import { Navbar, Nav, Dropdown, Button } from 'react-bootstrap';
 import CartWidget from './CartWidget';
 import SearchBar from './SearchBar';
 import { FaCapsules, FaFirstAid, FaBaby, FaUserNurse, FaHome, FaLightbulb, FaTag } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 // Definimos nuestras categorías con subcategorías
 const categories = [
@@ -47,7 +49,7 @@ function NavBar() {
     return (
       <>
         <Navbar expand="lg" style={{backgroundColor: '#014694', marginBottom: '1rem', padding: '1rem 2rem'}}>
-          <Navbar.Brand href="#home" style={{color: 'white', marginLeft: '2rem', fontWeight: 'bold', fontSize: '1.5rem'}}>farmaciaShop</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{color: 'white', marginLeft: '2rem', fontWeight: 'bold', fontSize: '1.5rem'}}>farmaciaShop</Navbar.Brand>
           <div className="d-flex w-100 justify-content-between">
             <SearchBar />
             <Button variant="outline-light" style={{ marginRight: '10px' }}>Cuenta</Button>
@@ -78,3 +80,5 @@ function NavBar() {
   }
   
   export default NavBar;
+
+ 
