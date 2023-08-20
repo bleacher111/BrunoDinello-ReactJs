@@ -66,9 +66,9 @@ function NavBar() {
                     {category.icon} {category.name}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    {category.subcategories.map(subcat => (
-                      <Dropdown.Item href={`#/action-${subcat}`}>{subcat}</Dropdown.Item>
-                    ))}
+                  {category.subcategories.map((subcat, index) => (
+                    <Dropdown.Item key={index} href={`#/action-${subcat}`}>{subcat}</Dropdown.Item>
+                  ))}
                   </Dropdown.Menu>
                 </Dropdown>
               ))}

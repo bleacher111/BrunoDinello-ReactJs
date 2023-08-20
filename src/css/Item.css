@@ -1,0 +1,18 @@
+.item-card {
+    width: 18rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .item-card img {
+    height: 200px; /* Puedes ajustar la altura de acuerdo a tus necesidades */
+    object-fit: cover;
+  }
+  
+  .item-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  

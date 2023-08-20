@@ -1,0 +1,91 @@
+.item-detail {
+    padding: 20px;
+  }
+  
+  .item-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .item-category {
+    font-size: 1rem;
+  }
+  
+  .item-description {
+    margin: 15px 0;
+  }
+  
+  .item-price {
+    font-size: 1.25rem;
+  }
+  
+  .price-amount {
+    font-weight: bold;
+  }
+  
+  .item-stock {
+    font-size: 1rem;
+  }
+  
+  .stock-amount {
+    font-weight: bold;
+  }
+  
+  .item-card {
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .item-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .item-category {
+    font-size: 1.1rem;
+  }
+  
+  .item-description {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  .item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .price-amount {
+    color: #007bff;
+  }
+  
+  .item-stock {
+    font-size: 1.1rem;
+  }
+  
+  .stock-amount {
+    color: #28a745;
+  }
+  
+  .item-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .add-to-cart-button {
+    margin-top: 20px;
+  }
+  

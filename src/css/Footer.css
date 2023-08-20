@@ -1,0 +1,20 @@
+.footer {
+    background-color: #014694;
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+  }
+  

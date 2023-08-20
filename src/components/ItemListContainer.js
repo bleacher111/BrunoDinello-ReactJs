@@ -1,33 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Item from './Item';
+import { db }  from '../config/firebase';
+import { getDocs, collection } from "firebase/firestore";
 
-const products = [
-  { id: '1', category: 'medicamentos', name: 'Paracetamol', price: '10.00' },
-  { id: '2', category: 'medicamentos', name: 'Aspirina', price: '8.00' },
-  { id: '3', category: 'belleza', name: 'Crema Hidratante', price: '15.00' },
-  { id: '4', category: 'belleza', name: 'Shampoo', price: '7.00' },
-
-];
 
 function ItemListContainer() {
-  const { id } = useParams();
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    let filteredProducts;
-
-    if (id) {
-      filteredProducts = products.filter(product => product.category === id);
-    } else {
-      filteredProducts = products; // Si no hay id, mostrar todos los productos.
-    }
-
-    setTimeout(() => {
-      setItems(filteredProducts);
-    }, 1000);
-  }, [id]);
-
+  useEffect( () => {
+    const findall = async () => {
+      const itemsCollection = await getDocs(collection(db, "itemCollection"));
+      setItems(itemsCollection.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+      
+    };
+    findall();
+  }, []);
+console.log("Items", items);
   return (
     <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
       {items.map(item => (
@@ -39,3 +28,16 @@ function ItemListContainer() {
 
 export default ItemListContainer;
 
+
+// useEffect(() => {
+//   const database = getFirestore();
+
+//   const items1 = doc(database,"itemCollection","igdlsKgn2SAppUniwWZ2");
+//   getDoc(items1).then((snapshot) => {
+//     if snapshot.exists() {
+//       const data = snapshot.data();
+      
+//       const artículos = {
+//         id: snapshot.id,
+//         CódigoArt : data.Código Artículo,
+//       };
